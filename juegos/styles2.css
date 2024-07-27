@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.balloon-container {
+    width: 300px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.balloon {
+    width: 100px;
+    height: 100px;
+    background-color: #FF69B4;
+    border-radius: 50%;
+    margin: 20px auto;
+    transition: width 0.5s, height 0.5s;
+}
+
+.balloon.inflated {
+    width: 150px;
+    height: 150px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}

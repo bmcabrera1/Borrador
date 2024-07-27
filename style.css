@@ -1,0 +1,31 @@
+.Titulo-1 {
+  font-family: 'PT Serif', serif;
+  font-size: 1.5rem;
+}
+
+.introductions_sec .container,
+.reason_sec .container,
+.efects_sec .container,
+.solutions_sec .container,
+.contact_sec .container {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+header img {
+  max-height: 60px;
+}
+
+.introductions_sec h2,
+.reason_sec h3,
+.efects_sec h3,
+.solutions_sec h3,
+.contact_sec h3 {
+  color: #007bff;
+}
+
+footer {
+  background-color: #343a40;
+  color: #ffffff;
+}
