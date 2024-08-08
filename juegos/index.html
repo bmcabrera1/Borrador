@@ -4,40 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>juegos</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles2.css">
 </head>
-<body >
-    <header>
-        <div class="ct_header">
-            <h1 class="Titulo-1">JUEGOS</h1>
-        </div>
-        <nav class="ct_menu">
-            <ul>
-                <li><a href="index.html">Informate</a></li>
-                <li><a href="../index.html">Principal</a></li>
-            </ul>   
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <img src="logo-puce-nuevo.png" class="header__nav--logo" alt="Logo Puce">
+            <div class="header__nav__menu">
+                <a class="header__nav__menu header__nav__menu--link-hover" href="/index.html">Informate</a>
+                <a class="header__nav__menu header__nav__menu--link-hover" href="/index.html">Nosotros</a>
+                <a class="header__nav__menu header__nav__menu--link-hover" href="juegos/index.html">Desestresate</a>
+            </div>
         </nav>
     </header>
 
-    <div id="contenedor">
-        <div>
-            <h1>Haz clic en cualquier parte del siguiente cuadro :)</h1>
-            <div id="circle-container"></div>
-            <script src="script.js"></script>
+    <section class="introduction">
+        <div class="introduction__container">
+            <img src="/img/videos.jpg" alt="Estres-image" class="introduction__image">
         </div>
-        <div>
-        <h1>Infla el Globo</h1>
-        <div class="balloon-container">
-        <div class="balloon" id="balloon"></div>
-        <button id="inflate-btn">Inflar</button>
-        <button id="pop-btn">Reventar</button>
-        <p id="score">Puntuación: 0</p>
+        <div class="introduction__content">
+            <h2 class="introduction__title">¿Qué es el estrés laboral?</h2>
+            <p class="introduction__text">
+                El estrés laboral es una respuesta física y emocional que puede ocurrir cuando las demandas del trabajo
+                exceden la capacidad del individuo para manejarlas. Es un problema común que afecta a trabajadores de
+                todas las industrias y niveles jerárquicos.
+            </p>
         </div>
+    </section>
 
-        <script src="script2.js"></script>
+    <section>
+        <div id="contenedor">
+            <div class="juego">
+                <h1>Haz clic en cualquier parte del siguiente cuadro</h1>
+                <div id="circle-container"></div>
+            </div>
+
+    </section>
+    <br>
+    <br>
+    <br>
+    <section>
+            <div class="juego">
+                <h1>Infla el Globo</h1>
+                <div class="balloon-container">
+                    <div class="balloon" id="balloon"></div>
+                    <button id="inflate-btn">Inflar</button>
+                    <button id="pop-btn">Reventar</button>
+                    <p id="score">Puntuación: 0</p>
+                </div>
+            </div>
         </div>
-    </div>
-   
+        <script src="script.js"></script>
+        <script src="script2.js"></script>
+    </section>
 </body>
 </html>

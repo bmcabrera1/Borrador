@@ -1,98 +1,175 @@
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    background-color:#F2FAFD ;
-    
+/* Fuente futurista */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header{
-    display: flex;
-    height: 120px;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    width: 100%;
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.ct_header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Estilos del menu */
+
+.header__nav{
+  background-color: #89c7f2;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
 }
 
-.ct_header h1{
-    font-size: 35px;
-    font-weight: bolder;
-    color: #164284;
-}
-  
-.ct_menu{
-    position: absolute;
-    vertical-align: baseline;
-    right: 80px;
-  
-}
-  
-.ct_menu ul{
-    list-style-type: none;
+.header__nav--logo{
+  height: 90%;
 }
 
-.ct_menu li{
-    display: inline;
-    margin: 0 0 0 40px;
-    text-decoration: none;  
-}
-  
-.ct_menu a{
-    text-decoration: none;
-    font-size: 25px;
-    color: #00A0DD;
-    font-weight: bold;
-    text-transform: uppercase;
+.header__nav__menu{
+  font-size: 28px;
 }
 
-#circle-container {
-    width: 100%;
-    height:80%;
-    border: 2px solid #000;
-    position: relative;
-    overflow: hidden;
+.header__nav__menu--link-hover{
+  color: white;
+  margin-left: 30px;
+  text-decoration: none;
 }
 
-.circle {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: pop-in 0.5s ease-out;
+.header__nav__menu--link-hover:hover{
+  text-decoration: none;
 }
 
-@keyframes pop-in {
-    0% {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 0;
-    }
-    80% {
-        transform: translate(-50%, -50%) scale(1.2);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
+/* Contenedor Estres */
+
+.introduction__container{
+  background-color: white;
+  position: relative;
+  display: flex;
+  margin: 1% 5%;
+  width: 90%;
+  max-height: 400px;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+.introduction__image{
+  width: 100%;
+  height: 90%;
+}
+.introduction__content{
+  position: absolute;
+  max-width: 400px;
+  max-height: 250px;
+  overflow: hidden;
+  top: 30%;
+  left: 12%;
+  background-color: white;
+  padding: 2%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.introduction__title{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.introduction__text{
+  margin-top: 5%;
+  font-size: 16px;
+  text-align: justify;
 }
 
 #contenedor {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: #00ffcc;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#circle-container {
+  width: 300px;
+  height: 300px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ffcc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pop-in 0.5s ease-out;
+}
+
+@keyframes pop-in {
+  0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
   }
-  
-  #contenedor > div {
-    width: 50%;
+  80% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 1;
   }
+  100% {
+      transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.balloon-container {
+  width: 300px;
+  margin: 40px auto;
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+.balloon {
+  width: 100px;
+  height: 150px;
+  background-color: #ff0066;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+button {
+  background-color: #00ffcc;
+  color: #0a0a0a;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00bfa5;
+}
+
+#score {
+  color: #00ffcc;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}

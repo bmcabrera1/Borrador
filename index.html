@@ -5,123 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contención emocional</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="bg-primary text-white py-2">
-        <div class="container d-flex justify-content-between align-items-center">
-            <img src="img/logo-puce-nuevo.png" alt="Logo-puce" class="img-fluid" style="max-height: 50px;">
-            <h1 class="Titulo-1">ESTRÉS LABORAL</h1>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="#">Menu</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Infórmate</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="games.html">Juegos</a>
-                        </li>
-                    </ul>
-                </div>
+    <header class="header">
+        <nav class="header__nav">
+            <img src="img/logo-puce-nuevo.png" class="header__nav--logo" alt="Logo Puce">
+            <div class="header__nav__menu">
+                <a class="header__nav__menu header__nav__menu--link-hover" href="index.html">Informate</a>
+                <a class="header__nav__menu header__nav__menu--link-hover" href="index.html">Nosotros</a>
+                <a class="header__nav__menu header__nav__menu--link-hover" href="juegos/index.html">Desestresate</a>
             </div>
         </nav>
     </header>
+    <section class="introduction">
+        <div class="introduction__container">
+            <img src="img/Estres.jpg" alt="Estres-image" class="introduction__image">
+        </div>
+        <div class="introduction__content">
+            <h2 class="introduction__title">¿Qué es el estrés laboral?</h2>
+            <p class="introduction__text">
+                El estrés laboral es una respuesta física y emocional que puede ocurrir cuando las demandas del trabajo
+                exceden la capacidad del individuo para manejarlas. Es un problema común que afecta a trabajadores de
+                todas las industrias y niveles jerárquicos.
+            </p>
+        </div>
+    </section>
 
-    <section class="introductions_sec my-4">
-        <div class="container d-flex flex-column flex-md-row align-items-center">
-            <img src="img/introduccion.jpg" alt="Introduccion" class="img-fluid mb-3 mb-md-0" style="max-width: 300px;">
-            <div class="ct_introduction ml-md-4">
-                <h2>¿Qué es el estrés laboral?</h2>
-                <p>
-                    El estrés laboral es una respuesta física y emocional que puede ocurrir cuando las demandas del trabajo
-                    exceden la capacidad del individuo para manejarlas. Es un problema común que afecta a trabajadores de
-                    todas las industrias y niveles jerárquicos.
-                </p>
+    <section class="survey">
+        <div class="survey__container">
+            <h2 class="survey__title">Mide tu nivel de estrés</h2>
+            <form id="surveyForm" onsubmit="calculateStress(event)">
+                <div class="survey__questions">
+                    <label class="survey__question">1. ¿Te sientes estresado en el trabajo?</label>
+                    <div class="survey__options">
+                        <label class="survey__option">
+                            <input type="radio" name="question1" value="0"> No, nunca
+                        </label>
+                        <label class="survey__option">
+                            <input type="radio" name="question1" value="1"> A veces
+                        </label>
+                        <label class="survey__option">
+                            <input type="radio" name="question1" value="2"> A menudo
+                        </label>
+                        <label class="survey__option">
+                            <input type="radio" name="question1" value="3"> Siempre
+                        </label>
+                    </div>
+                </div>
+                <div class="survey__questions">
+                    <label class="survey__question">2. ¿Tienes problemas para dormir debido al estrés?</label>
+                    <div class="survey__options">
+                        <label class="survey__option">
+                            <input type="radio" name="question2" value="0"> No, nunca
+                        </label>
+                        <label class="survey__option">
+                            <input type="radio" name="question2" value="1"> A veces
+                        </label>
+                        <label class="survey__option">
+                            <input type="radio" name="question2" value="2"> A menudo
+                        </label>
+                        <label class="survey__option">
+                            <input type="radio" name="question2" value="3"> Siempre
+                        </label>
+                    </div>
+                </div>
+                <div class="survey__questions">
+                    <label class="survey__question">3. ¿Sientes que no puedes relajarte?</label>
+                    <div class="survey__options">
+                        <label class="survey__option">
+                            <input type="radio" name="question3" value="0"> No, nunca
+                        </label>
+                        <label class="survey__option">
+                            <input type="radio" name="question3" value="1"> A veces
+                        </label>
+                        <label class="survey__option">
+                            <input type="radio" name="question3" value="2"> A menudo
+                        </label>
+                        <label class="survey__option">
+                            <input type="radio" name="question3" value="3"> Siempre
+                        </label>
+                    </div>
+                </div>  
+                <button class="survey__button--hover"type="button" onclick="calculateStress()">Calcular</button>
+            </form>
+            <div id="result"></div>
+            <script src="script.js"></script>
+            <div id="grid" class="grid-container hidden">
+                <a class="grid-item"  href="/videos.html">Videos</a>
+                <a class="grid-item"  href="/index.html">Juegos</a>
+                <a class="grid-item"  href="/index.html">Meditación y Mindfulness</a>
+                <a class="grid-item"  href="/index.html">Apoyo Profesional</a>
             </div>
-        </div>
     </section>
-
-    <section class="reason_sec my-4">
-        <div class="container">
-            <h3>Causas del estrés laboral</h3>
-            <ol class="list-group">
-                <li class="list-group-item"><strong>Exceso de trabajo: </strong>Sobrecarga de tareas y expectativas poco realistas.</li>
-                <li class="list-group-item"><strong>Plazos ajustados: </strong>Fechas límite estrictas que no permiten margen de maniobra.</li>
-                <li class="list-group-item"><strong>Falta de control: </strong>Poca autonomía y capacidad de tomar decisiones.</li>
-                <li class="list-group-item"><strong>Ambiente de Trabajo: </strong>Condiciones físicas inadecuadas, como ruido o iluminación deficiente.</li>
-                <li class="list-group-item"><strong>Inseguridad Laboral: </strong>Miedo a perder el empleo o incertidumbre sobre el futuro profesional.</li>
-            </ol>
-        </div>
-    </section>
-
-    <section class="efects_sec my-4">
-        <div class="container">
-            <h3>Efectos del estrés laboral</h3>
-            <ol class="list-group">
-                <li class="list-group-item"><strong>Problemas de Salud Mental: </strong>Ansiedad, depresión y agotamiento emocional.</li>
-                <li class="list-group-item"><strong>Problemas de Salud Física: </strong>Dolores de cabeza, problemas gastrointestinales, trastornos del sueño y enfermedades cardiovasculares.</li>
-                <li class="list-group-item"><strong>Reducción de la Productividad: </strong>Dificultad para concentrarse, disminución del rendimiento y aumento del ausentismo.</li>
-                <li class="list-group-item"><strong>Relaciones Personales: </strong>Tensión en las relaciones personales fuera del trabajo, incluyendo familia y amigos.</li>
-            </ol>
-        </div>
-    </section>
-
-    <section class="solutions_sec my-4">
-        <div class="container">
-            <h3>¿Cómo combatirlo?</h3>
-            <ol class="list-group">
-                <li class="list-group-item"><strong>Organización y Planificación: </strong>Establecer prioridades y gestionar el tiempo de manera efectiva.</li>
-                <li class="list-group-item"><strong>Descansos Regulares: </strong>Tomar pausas durante la jornada laboral para descansar y recargar energías.</li>
-                <li class="list-group-item"><strong>Ejercicio Físico: </strong>Realizar actividad física regular para reducir la tensión y mejorar el bienestar general.</li>
-                <li class="list-group-item"><strong>Desarrollo de Habilidades: </strong>Participar en programas de capacitación que mejoren la capacidad para manejar el estrés y aumentar la resiliencia.</li>
-            </ol>
-        </div>
-    </section>
-
-    <section class="contact_sec my-4">
-        <div class="container">
-            <h3>Necesitas ayuda, Contacta a alguno de los siguientes profesionales</h3>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <h4>Juan Moya</h4>
-                    <p>Teléfono: 0998698588</p>
-                    <p>Email: ba@go.com</p>
-                    <p>Centro de apoyo Patito</p>
-                </li>
-                <li class="list-group-item">
-                    <h4>Juan Moya</h4>
-                    <p>Teléfono: 0998698588</p>
-                    <p>Email: ba@go.com</p>
-                    <p>Centro de apoyo Patito</p>
-                </li>
-                <li class="list-group-item">
-                    <h4>Juan Moya</h4>
-                    <p>Teléfono: 0998698588</p>
-                    <p>Email: ba@go.com</p>
-                    <p>Centro de apoyo Patito</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p>Derechos reservados 2024</p>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
