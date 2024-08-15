@@ -1,251 +1,106 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/*Estilos Menu*/
+
+body {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-body{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+header{
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
 }
 
-
-/* Estilos del menu */
-.header__nav{
-  background-color: #89c7f2;
-  padding: 0 100px;
+.ct_header{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 100px;
 }
 
-.header__nav--logo{
-  height: 90%;
+.ct_header img{
+  height: 120px;
+  margin-right: 120px;
 }
 
-.header__nav__menu{
-  font-size: 28px;
+.ct_header h1{
+  font-size: 35px;
+  font-weight: bolder;
+  color: #164284;
 }
 
-.header__nav__menu--link-hover{
-  color: white;
-  margin-left: 30px;
-  text-decoration: none;
-}
-
-.header__nav__menu--link-hover:hover{
-  text-decoration: none;
-}
-
-/* Estilos del contenedor sobre el estres */
-
-.introduction__container{
-  background-color: white;
-  position: relative;
-  display: flex;
-  margin: 1% 5%;
-  width: 90%;
-  max-height: 400px;
-  overflow: hidden;
-  background-position: center center;
-  background-size: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
-}
-.introduction__image{
-  width: 100%;
-  height: 90%;
-}
-.introduction__content{
+.ct_menu{
   position: absolute;
-  max-width: 400px;
-  max-height: 250px;
-  overflow: hidden;
-  top: 30%;
-  left: 12%;
-  background-color: white;
-  padding: 2%;
-  border-radius: 10px;
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  vertical-align: baseline;
+  right: 80px;
+
 }
 
-.introduction__title{
-  font-size: 28px;
-  font-weight: bold;
+.ct_menu ul{
+  list-style-type: none;
+}
+.ct_menu li{
+  display: inline;
+  margin: 0 0 0 40px;
+  text-decoration: none;  
 }
 
-.introduction__text{
-  margin-top: 5%;
-  font-size: 16px;
-  text-align: justify;
-}
-
-/* Estilos encuesta */
-
-.survey__container{
-  background-color: white;
-  display: block;
-  margin: 1% 5%;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.survey__title{
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-#surveyForm{
-  margin: 20px;
-}
-
-.survey__questions {
-  margin-bottom: 15px;
-}
-
-.survey__question{
-  display: block;
-  margin-bottom: 5px;
-}
-
-.survey__options{
-  width: 100%;
-  margin: 1% 0 1% 0;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-.survey__option{
-  margin: 0.5% 0 0 13%;
-  align-items: center center;
-}
-
-#result {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 18px;
-} 
-
-/* Estilos de los botones de respuesta */
-
-.survey__button--hover {
-  background: linear-gradient(45deg, #6db3f2, #1e3c72); /* Colores ajustados */
-  border: none;
-  color: white;
-  padding: 15px 60px;
-  text-align: center;
+.ct_menu a{
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px 40%;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(109, 179, 242, 0.75), 0 4px 15px rgba(30, 60, 114, 0.75);
+  font-size: 25px;
+  color: #00A0DD;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.survey__button--hover:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 30px rgba(109, 179, 242, 0.75), 0 8px 30px rgba(30, 60, 114, 0.75);
-}
 
-/* Estilos de la cuadrícula */
-.grid-container {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+/*Estilos introduccion*/
 
-.grid-item {
+.introductions_sec{
   display: flex;
+  background-color: #F2FAFD;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 200px;
-  height: 40px;
-  border-radius: 50px;
-  text-decoration: none;
-  background: linear-gradient(45deg, #6db3f2, #1e3c72); /* Colores ajustados */
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(109, 179, 242, 0.75), 0 4px 15px rgba(61, 92, 149, 0.75)
-}
-
-.grid-item:hover {
-  text-decoration: none;
-  transform: scale(1.1);
-}
-
-.hidden {
-  display: none;
-}
-
-/* Videos */
-.video__image{
   width: 100%;
-  height: 90%;
-  background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con 50% de opacidad */
+  height: 400px;
+  margin: 0;
+  padding: 0;
 }
 
-/* Estilos frame video */
-
-.video{
-  background-color: white;
-  display: flex;
-  margin: 1% 5%;
-  width: 90%;
-  max-height: 400px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.introductions_sec img{
+  border: 0;
+  max-width: 70%;
+  max-height: 90%;
+  vertical-align: middle;
+  margin: 10% 10% 10% 10%;
+  border-radius: 5px;
+}
+.introductions_sec img:hover{
+  transform: scale(1.15);
 }
 
-
-.video__container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 60%;
-  height: 340px;
-  margin: 10px
+.ct_introduction{
+  display: block;
+  justify-content: flex-end;
+  max-width: 84%
 }
-
-.video__iframe{
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.video__content {
-  position: absolute;
-  width: 400px;
-  max-height: 250px;
-  margin-top: 4%;
-  margin-left: 90%;
-  background-color: white;
-  padding: 2%;
-  border: none;
-}
-
-.video__title{
+.ct_introduction h2{
   font-size: 28px;
   font-weight: bold;
+  letter-spacing: -.03em;
+}
+.ct_introduction p{
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: -.03em;
+  padding-right: 8%;  
+  text-align: justify;
 }
 
-.video__text{
-  margin-top: 5%;
-  font-size: 16px;
-  text-align: justify;
+@media screen and (max-width:480px){
+  .introductions_sec{
+      height: 70%;
+  }
 }
